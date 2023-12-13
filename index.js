@@ -99,3 +99,13 @@ console.log("Vangel Hristov");
 //git add .
 //git commit -m "Initial commit"
 //git push --set-upstream master
+
+// Napravete funkcija koja ke presmetuva zbir, razlika, mnozenje, delenje na dva broja
+
+//HINT -> operation e string koj sodrzi +, -, /, *
+function calculate(operation, a, b) {
+  //switch
+  //if
+}
+
+calculate("+", 4, 5);
