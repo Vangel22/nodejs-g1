@@ -7,3 +7,24 @@
 function endsWithA(students) {
   return students.filter((stud) => stud.ime.endsWith("a"));
 }
+
+function sortByName(students) {
+  return students.sort((a, b) => {
+    if (a.ime < b.ime) {
+      return -1;
+    } else if (a.ime > b.ime) {
+      return 1;
+    } else {
+      return 0;
+    }
+  });
+}
+
+function sortByProsek(students) {
+  return students.sort((a, b) => a.prosek - b.prosek);
+}
+
+module.exports = {
+  sortByName,
+  sortByProsek,
+};

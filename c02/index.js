@@ -5,6 +5,8 @@ const fs = require("fs"); // CommonJS -> e default za Node.js
 const { greetMe, calculate } = require("./calculator"); // CommonJS
 // import { greetMe, calculate } from "./calculator"; -> ES
 
+const { sortByName, sortByProsek } = require("./students");
+
 // ES modulite mora da bidat na vrvot od fajlot
 // CommonJS ni ovozmozuvaat da gi iskoristime kade sakame
 if (true) {
@@ -95,6 +97,9 @@ const studenti = [
   { ime: "Natasha", prosek: 8.1, grad: "Skopje" },
   { ime: "Stanko", prosek: 7.2, grad: "Strumica" },
 ];
+
+console.log(sortByProsek(studenti));
+console.log("by name", sortByName(studenti));
 
 // Callback - ES5
 
