@@ -96,5 +96,35 @@ const studenti = [
   { ime: "Stanko", prosek: 7.2, grad: "Strumica" },
 ];
 
-// const studentsEndingWithA = endsWithA(studenti);
-// console.log(studentsEndingWithA);
+// Callback - ES5
+
+function pobarajKartickaVoBanka(name, callback) {
+  console.log("Vaseto ime", name);
+  //koga ke bide izgotvena
+  callback(); // ne baraat na telefon za da ja podigneme kartickata
+}
+
+function callBackFunkcija() {
+  console.log("Zdravo, dojdete da ja podignete kartickata");
+}
+
+pobarajKartickaVoBanka("Semos", callBackFunkcija);
+
+// Callback hell
+
+// asyncOperation1(function(response1) {
+//     // First async operation
+//     asyncOperation2(response1, function(response2) {
+//       // Second async operation nested in the first one
+//       asyncOperation3(response2, function(response3) {
+//         // Third async operation nested in the second one
+//         asyncOperation4(response3, function(response4) {
+//           // Fourth async operation nested in the third one
+//           // ... and so on
+//         });
+//       });
+//     });
+//   });
+
+// Promise - ES6
+//tri slucai: fullfiled, pending, rejected
