@@ -1,1 +1,6 @@
 Hello Semos!
+
+{
+    test: "Semos",
+    temp: "Jas sum test"
+}

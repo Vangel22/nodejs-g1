@@ -1,4 +1,5 @@
 const fs = require("fs");
+const http = require("http");
 // Promise - ES6
 // tri slucai: fullfiled, pending, rejected
 
@@ -91,3 +92,62 @@ async function readMe() {
 // 2. Read that file and display the contents
 // Optional:
 // write and read should be in local modules and imported in
+
+// WWW - ova se operacii na internet
+// HTTP - Hyper Text Transfer Protocol - vrsi razmena na fajlovi kako "cist tekst"
+// HTTPs - Hyper Text Transfer Protocol Secure - vrsi razmena na enkriptirani fajlovi
+
+// HTTP metodi:
+// 1. GET - da zemame podatoci od nekoj resurs, nema telo -> readFile
+// 2. POST - da zapiseme podatoci vo nekoj resurs, ima telo -> writeFile
+
+// 3. PUT - da se azurira odreden resurs (data.txt), ima telo, i ke go zameni teloto koe sto veke postoi, nemozeme da azurirame resurs koj ne postoi
+// 4. PATCH - moze da izmeni samo odreden kluc-vrednost vo fajlot, t.e samo odreden segment, ima telo
+// 5. DELETE - opcionalno telo, ni ovozmozuva da go izbriseme resursot
+
+// Soft delete, hard delete
+
+// Client/Server Arhitektura
+// Request/Response
+
+const server = http.createServer((req, res) => {
+  //req.body
+  //req.method
+  //req.query
+
+  //req.params
+  //req.headers
+
+  console.log("request url", req.url);
+
+  //Po default sekoja ruta vrakja GET baranje
+
+  //ruta -> /home
+  //   if(req.url === "/convert") {
+  //  if (req.method === "POST") {
+  //        const data = convertToMiles();
+  //        res.end("For 2 miles in km is 4km")
+  //   }
+  //   if (req.url === "/home") {
+  //     if (req.method === "POST") {
+  //       console.log("POST");
+  //     }
+  //     if (req.method === "GET") {
+  //       console.log("GET");
+  //     }
+  // res.writeHead(200, { "Content-Type": "text/plain" });
+  res.end("<h1>Welcome home Vangel!</h1>");
+  //   } else {
+  //     //bilo koja druga ruta
+  //     res.writeHead(200, { "Content-Type": "text/plain" });
+  //     res.end("Hello Vangel!");
+  //   }
+});
+
+// bazicna ruta ni e samo "/"
+
+server.listen(8080);
+
+// const server = http.createServer(function (req, res) {});
+
+//Link for HTTP: https://www.w3schools.com/whatis/whatis_http.asp
