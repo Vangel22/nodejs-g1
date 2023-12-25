@@ -100,6 +100,8 @@ async function readMe() {
 // HTTP metodi:
 // 1. GET - da zemame podatoci od nekoj resurs, nema telo -> readFile
 // 2. POST - da zapiseme podatoci vo nekoj resurs, ima telo -> writeFile
+// email password -> klikame kopce za logiranje -> ocekuvame da se logirame
+
 // 3. PUT - da se azurira odreden resurs (data.txt), ima telo, i ke go zameni teloto koe sto veke postoi, nemozeme da azurirame resurs koj ne postoi
 // 4. PATCH - moze da izmeni samo odreden kluc-vrednost vo fajlot, t.e samo odreden segment, ima telo
 // 5. DELETE - opcionalno telo, ni ovozmozuva da go izbriseme resursot
@@ -116,11 +118,9 @@ const server = http.createServer((req, res) => {
   //req.params
   //req.headers
 
-  console.log("request url", req.url);
-
   //Po default sekoja ruta vrakja GET baranje
 
-  //ruta -> /home
+  // ruta -> /home
   //   if(req.url === "/convert") {
   //  if (req.method === "POST") {
   //        const data = convertToMiles();
