@@ -1,4 +1,4 @@
-const http = require("http"); //C programskiot jazik
+const http = require("http"); // C programskiot jazik
 
 function convertMilesToKm(miles) {
   return miles * 1.6;
@@ -8,6 +8,11 @@ function convertMilesToKm(miles) {
 //JSON.stringify -> ke go pretvori vo JSON objekt
 
 const server = http.createServer((req, res) => {
+  if (req.method === "POST" && req.url === "/registriraj-korisnik") {
+    // email @provajder.domen nastavka (.com, .net)
+    // const parsedData = JSON.parse(data);
+    // parsedData.email -> sakam da napravam proverka dali mejlot e vo pravilen format
+  }
   if (req.method === "POST" && req.url === "/convert") {
     let data = "";
     //ke slusa na portata 8080 za nadoagjacki baranja
@@ -37,3 +42,12 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(8080);
+
+// Regularni izrazi -> email, password
+// xxxxxxx@zzz.yyy
+// h.vangel22@gmail.com
+
+// vangel@@@@alo.YS1123
+
+// treba da imate 8 karakteri, treba da imate simbol, treba brojka, golema bukva
+// ASCII a-z A-Z

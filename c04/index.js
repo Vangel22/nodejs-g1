@@ -11,7 +11,7 @@ function convertMilesToKm(miles) {
 //   sodrzina: "za toj naslov",
 // };
 
-//192.168.... -> mojotdomen.com
+//192.168.... -> mojotdomen
 const server = http.createServer((req, res) => {
   // "/" -> root ili domasna ruta
   // POST baranje
