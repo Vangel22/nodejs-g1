@@ -1,6 +1,9 @@
 Domasna
-    1.
+    1. Kreirajte ruta "/semos", kade sto GET baranjeto ke vrakja podatoci od "domasni.txt" fajl, t.e negovata sodrzina.
+    2. Istata ruta "/semos" koga ke dobie POST baranje, so pomos na fs.writeFile da gi zapise novite podatoci vo "domasni.txt".
+   
+    Vnimavajte kako gi zemate podatocite od POST baranjeto, obratete vnimanie na parsiranjeto, osobeno koga pravevme JSON.parse,
+    i potoa kako ke gi zapiseme vo fajlot tie isti podatoci.
 
-
-Bonus zadaci
-    1.
+    *Bonus - ima opcija koga zapisuvate vo odreden fajl konstanto da mozete da napravite "append", na sekoe baranje da zapisete t.e koga ke go povikate writeFile,
+    idejata tuka e da ne se prebrisuva toa sto veke go ima vo fajlot "domasni.txt" tuku novata sodrzina da se zalepi za veke postoeckata.
