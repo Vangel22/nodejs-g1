@@ -1,1 +1,2 @@
 handleUser funkcijata da ja napravite da raboti so drug regular expression. Primer: email
+Procitajte go README.md fajlot
