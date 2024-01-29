@@ -1,4 +1,4 @@
-const { read, write } = require("./read-write");
+const { read, write } = require("../read-write");
 
 //Create - POST - WITHOUT SERVER
 // const addStudent = async (studentData) => {

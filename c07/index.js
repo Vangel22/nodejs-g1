@@ -4,7 +4,7 @@ const {
   addStudent,
   editStudent,
   deleteStudent,
-} = require("./students");
+} = require("./handlers/students");
 
 const app = express();
 // kluc vrednost - form data
