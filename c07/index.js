@@ -10,11 +10,13 @@ const app = express();
 // kluc vrednost - form data
 
 //middleware
-// app.use(express.json());
+app.use(express.json());
 // ni ovozmozuva baranjata so telo da gi zemame so json
 
 app.get("/students", getAllStudents);
 app.post("/students", addStudent);
+app.put("/students/:index", editStudent);
+app.delete("/students/:index", deleteStudent);
 
 app.listen(3000, () => console.log("Server started at port 3000"));
 

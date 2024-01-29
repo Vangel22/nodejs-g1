@@ -36,40 +36,40 @@ const getAllStudents = async (req, res) => {
   res.status(200).send(students);
 };
 
-//Update - PUT
-const editStudent = async (studentIndex, studentData) => {
-  // editStudent(0, { ime: "Jane", prezime: "Doe" })
+//Update - PUT - Should update the whole resourse
+const editStudent = async (req, res) => {
+  // req.params.index
+  const { index } = req.params;
+  // const { index: preimenuvanjeNaIndex } = req.params;
+
   let students = await read("data.json");
-  students = students.map((student, index) => {
-    if (studentIndex === index) {
-      // student = {"ime":"Vangel","prezime":"Hristov","godina":1999}
+  students = students.map((student, i) => {
+    if (i === Number(index)) {
       return {
-        //return ni vrakja objekt i bidejki podolu pravime spread operator site podatoci gi pravi kluc i vrednost
-        ...student, // po spread operator se sto ima vnatre se zema kako kluc i vrednost
-        // ime: "Vangel",
-        // prezime: "Hristov",
-        // godina: 1999,
-        ...studentData,
-        // ime: "Jane",
-        // prezime: "Doe"
-        // {"ime":"Jane","prezime":"Hristov","godina":1999}
+        ...student,
+        ...req.body,
       };
     }
     return student;
   });
+
   await write("data.json", students);
+  res.status(200).send(`Student with index ${index} updated!`);
+};
+
+// Should update only part of the object
+const editPartialStudent = async (req, res) => {
+  //
 };
 
 //Delete - DELETE
-const deleteStudent = async (studentIndex) => {
+const deleteStudent = async (req, res) => {
   let students = await read("data.json");
-  // const test = {
-  //   ime: "Test"
-  // }
+  const { index } = req.params;
 
-  // delete test.ime;
-  students = students.filter((student, index) => index !== studentIndex);
+  students = students.filter((student, i) => Number(index) !== i);
   await write("data.json", students);
+  res.status(200).send(`Student with index ${index} deleted!`);
 };
 
 module.exports = {
