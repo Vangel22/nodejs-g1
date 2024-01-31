@@ -28,5 +28,37 @@
         </tr>
         <% }); %>
     </table>
+    <table border="1" width="100%">
+        <tr>
+            <th>ID</th>
+            <th>Recept</th>
+            <th>Ingredients</th>
+            <th>Method</th>
+        </tr>
+        <% recepti.forEach(recept => { %>
+            <tr>
+                <th>
+                    <%=recept.id%>
+                </th>
+                <th>
+                    <%=recept.recipe%>
+                </th>
+                <th>
+                    <!-- This can be a loop -->
+                    <!-- <%=recept.ingredients.flower%> ,
+                    <%=recept.ingredients.eggs%> ,
+                    <%=recept.ingredients.milk%> ,
+                    <%=recept.ingredients.sunflowerOil%>  -->
+                </th>
+                <th>
+                    <%=recept.method.firstStep%> ,
+                    <%=recept.method.secondStep%> ,
+                    <%=recept.method.thirdStep%> ,
+                    <%=recept.method.fourthStep%> ,
+                    <%=recept.method.fifthStep%> 
+                </th>
+            </tr>
+       <% }); %>
+    </table>
 </body>
 </html>
