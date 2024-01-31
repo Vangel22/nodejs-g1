@@ -16,6 +16,7 @@ app.get("/", (req, res) => {
       { ime: "Станко", prezime: "Станковски", prosek: 8.4 },
       { ime: "Иван", prezime: "Ивановски", prosek: 7.0 },
     ],
+    recepti: [],
   };
   //index se odnesuva na /view/index.ejs
   res.render("index", data);
