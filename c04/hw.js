@@ -18,6 +18,7 @@ const server = http.createServer((req, res) => {
     //ke slusa na portata 8080 za nadoagjacki baranja
     req.on("data", (chunk) => {
       // ni ovozmuva da gi pribirame podatocite od serverot kako sto toj gi obrabotuva
+      console.log("chunk", chunk);
       data += chunk.toString();
     });
 

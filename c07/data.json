@@ -1,1 +1,4 @@
-[{"ime":"Stanko","prezime":"Stankovski","godina":1995},{"ime":"Test","prezime":"TestSur","godina":1987}]
+[
+    {"id": "","ime":"Stanko","prezime":"Stankovski","godina":1995, "test": 1234},
+    {"ime":"Test","prezime":"TestSur","godina":1987}
+]

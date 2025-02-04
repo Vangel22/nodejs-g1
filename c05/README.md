@@ -47,7 +47,7 @@
         [A-Za-z\d@$!%\*?&]{8,}: Matches a combination of uppercase letters, lowercase letters, digits, and specified special characters with a minimum length of 8 characters.
         $: Denotes the end of the string.
 
-    - The (?= ...) in regular expressions is like a condition or a check. It's a way of saying, "Look ahead in the string, and check if something specific is there,
+    - The (?= ...) - Positive lookahead in regular expressions is like a condition or a check. It's a way of saying, "Look ahead in the string, and check if something specific is there,
     without actually consuming (matching) those characters." It's a condition that must be satisfied for the overall pattern to match.
 
     Plus:

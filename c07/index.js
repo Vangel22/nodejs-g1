@@ -45,3 +45,30 @@ app.listen(3000, () => console.log("Server started at port 3000"));
 //   const dataAfter = await getAllStudents();
 //   console.log("data after", dataAfter);
 // })();
+
+// $and
+// &&
+
+// $or
+// ||
+
+// if(!user.exists() && !user.hasPayed)
+// $nor
+// false && false
+
+// $not
+// !
+
+// const test = false
+// const testTrue = !false;
+
+// Task - 1 (MongoDB - Users):
+
+// 1. Find all users and display them on the screen.
+// 2. Sort users in ascending order based on their age,
+// then in descending order.
+// 3. Find a user by their name.
+// 4. Find all users older than 30.
+// 5. Find all users younger than 30.
+// 6. Find 2 users aged 25.
+// Ako nemate korisnika po 25 godini napravete
